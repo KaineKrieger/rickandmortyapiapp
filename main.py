@@ -13,6 +13,9 @@ url = base + endpoint
 # calling the api for data
 response = requests.get(url)
 
+character_selection = str(input("give me a number in the range 1-826: "))
+
+response = requests.get(url + "/" + character_selection)
 
 # basic boolean to make sure it works.
 if response.ok:
